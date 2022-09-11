@@ -1,0 +1,1 @@
+import{u as a,j as i,a as u}from"./index.3916ac14.js";const r=()=>{const s=a();return i("div",{children:[u("div",{children:"\u6211\u662FApps\u9875\u9762"}),u("button",{onClick:()=>s("/page"),children:"\u8DF3\u8F6C\u5230 PAGE \u9875\u9762"})]})};export{r as Apps};
