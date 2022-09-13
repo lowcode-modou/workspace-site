@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: 同步主仓库并更新gh-pages分支
 
 # Controls when the workflow will run
 on:
@@ -30,4 +30,4 @@ jobs:
         run: echo Hello, world!
 
       - name: Clone Git
-        run: git clone https://ll929:${{ secrets.NPM_TOKEN }}@github.com/lowcode-modou/modou.git
+        run: git clone https://ll929:${{ secrets.MODOU__WORKFLOW_DISPATCH }}@github.com/lowcode-modou/modou.git
