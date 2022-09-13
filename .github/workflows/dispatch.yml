@@ -52,7 +52,6 @@ jobs:
       - name: Deploy workspace
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_branch: gh-pages  # default: gh-pages
           publish_dir: ./modou/websites/workspace/dist
           cname: workspace.modou.ink
