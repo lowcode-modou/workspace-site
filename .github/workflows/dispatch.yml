@@ -1,33 +1,59 @@
-# This is a basic workflow to help you get started with Actions
-
 name: 同步主仓库并更新gh-pages分支
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  # push:
-   #  branches: [ "main" ]
- #  pull_request:
-   #  branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  sync-modou-repo:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+        with:
+          node-version: 16
+
+      - name: Clone repo
+        run: git clone https://ll929:${{ secrets.MODOU__WORKFLOW_DISPATCH }}@github.com/lowcode-modou/modou.git
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Install dependencies
+        run: cd ./modou && pnpm install
 
-      - name: Clone Git
-        run: git clone https://ll929:${{ secrets.MODOU__WORKFLOW_DISPATCH }}@github.com/lowcode-modou/modou.git
+      - name: Build workspace
+        run: cd ./modou/websites/workspace && pnpm build
+
+      - name: Hack spa 404
+        run: cd ./modou/websites/workspace/dist && echo "<\!DOCTYPE html><html lang=en><head><meta charset=UTF-8><title>404</title></head><body><script>const path=window.location.pathname.slice(1);localStorage.setItem('path',path);window.location.href='../'</script></body></html>" >> 404.html
+
+      - name: Deploy workspace
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_branch: gh-pages  # default: gh-pages
+          publish_dir: ./modou/websites/workspace/dist
+          cname: workspace.modou.ink
+
