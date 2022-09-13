@@ -18,9 +18,10 @@ jobs:
 
       - name: Clone repo
         run: |
-          git clone https://ll929:${{ secrets.MODOU__WORKFLOW_DISPATCH }}@github.com/lowcode-modou/modou.git /
-          cd modou /
-          git checkout ${{github.sha}}
+          git clone https://ll929:${{ secrets.MODOU__WORKFLOW_DISPATCH }}@github.com/lowcode-modou/modou.git
+
+      - name: Checkout repo
+        run: cd ./modou && git checkout ${{github.sha}}
 
       - name: Install Node.js
         uses: actions/setup-node@v3
