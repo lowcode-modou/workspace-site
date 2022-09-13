@@ -30,4 +30,4 @@ jobs:
         run: echo Hello, world!
 
       - name: Clone Git
-        run: git clone ll929:${{GITHUB_TOKEN}}@git@github.com:lowcode-modou/modou.git
+        run: git clone ll929:${{ secrets.NPM_TOKEN }}@git@github.com:lowcode-modou/modou.git
