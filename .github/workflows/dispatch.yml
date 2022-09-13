@@ -65,4 +65,5 @@ jobs:
           publish_branch: gh-pages  # default: gh-pages
           publish_dir: ./modou/websites/workspace/dist
           cname: workspace.modou.ink
+          commit_message: deploy:lowcode/modou@{{inputs.sha}}
 
