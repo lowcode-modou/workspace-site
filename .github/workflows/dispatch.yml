@@ -2,6 +2,11 @@ name: 同步主仓库并更新gh-pages分支
 
 on:
   workflow_dispatch:
+    inputs:
+      sha:
+        description: 'MO_DOU GIT SHA'
+        required: true
+        type: string
 
 jobs:
   sync-modou-repo:
