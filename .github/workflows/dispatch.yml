@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 16
           repository: lowcode-modou/modou
-          ref: inputs.sha
-          token: secrets.MODOU__WORKFLOW_DISPATCH
+          ref: ${{inputs.sha}}
+          token: ${{ secrets.MODOU__WORKFLOW_DISPATCH }}
 
 #      - name: Clone repo
 #        run: |
