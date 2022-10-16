@@ -1,0 +1,1 @@
+import{a as r}from"./index.26fea10a.js";import{L as t}from"./index.5d61a34e.js";import{T as o}from"./index.87f67d26.js";import"./EditOutlined.11458c52.js";const p=()=>r(t,{children:r(t.Content,{children:r(o.Title,{children:"\u6570\u636E\u6A21\u578B"})})});export{p as Entity};
