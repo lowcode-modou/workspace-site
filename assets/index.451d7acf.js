@@ -1,1 +1,0 @@
-import{e,f as t,g as a,h as o,i as s,j as r,k as c}from"./AppFactoryContext.d3e1dd67.js";const i={appAtom:e,pagesSelector:t,pageByIdSelector:a,pageSelector:o,entitySelector:s,entityByIdSelector:r,entitiesSelector:c};export{i as M};
