@@ -1,0 +1,1 @@
+import{e,f as t,g as a,h as o,i as s,j as i,k as r,m as n,n as l,o as c}from"./AppFactoryContext.040895f6.js";const S={appAtom:e,pagesSelector:t,pageByIdSelector:a,pageSelector:o,entitySelector:s,entityByIdSelector:i,entitiesSelector:r,entityRelationsSelector:n,entityRelationsBySourceEntityNameMapSelector:l,entityRelationsByTargetEntityNameMapSelector:c};export{S as M};
