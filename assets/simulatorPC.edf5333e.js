@@ -1,0 +1,1 @@
+import{j as e,bd as t,be as r,bk as n,bj as d,Q as a}from"./client.8645cd59.js";const o=()=>e(t,{backend:r,context:window.parent,children:e(n,{rootWidgetId:"",widgets:[]})});d.createRoot(document.getElementById("simulator_pc_root")).render(e(a.StrictMode,{children:e(o,{})}));

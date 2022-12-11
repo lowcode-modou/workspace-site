@@ -625,4 +625,23 @@ function print() { __p += __j.call(arguments, '') }
   #simulator_pc_root{
     height: 100%;
   }
+`;injectGlobal`
+	::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	/* 设置滚动条的背景颜色 */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* 设置滚动条的滑块（滑轮）的颜色 */
+	::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	/* 设置滑块（滑轮）在滚动时的颜色 */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555;
+	}
 `;const reset="";var client={},m=reactDom$1.exports;client.createRoot=m.createRoot,client.hydrateRoot=m.hydrateRoot;export{pageByIdSelector as $,AntdIcon as A,create as B,ConfigContext$1 as C,React$4 as D,useLatest$1 as E,Footer$1 as F,useEffectWithTarget$1 as G,Header$2 as H,InternalLayout as I,getTargetElement as J,Keyframe as K,useDeepCompareEffectWithTarget$1 as L,isFunction$2 as M,isString$1 as N,isNumber as O,Pagination$1 as P,React$3 as Q,Row$1 as R,SizeContext$2 as S,Tabs as T,_objectWithoutProperties$2 as U,ProFormField$1 as V,FieldContext$1 as W,runFunction as X,appAtom as Y,pagesSelector as Z,_defineProperty$k as _,_extends$6 as a,useMoveWidget as a$,pageSelector$1 as a0,entitySelector as a1,entityByIdSelector as a2,entitiesSelector as a3,entityRelationsSelector as a4,entityRelationsBySourceEntityNameMapSelector as a5,entityRelationsByTargetEntityNameMapSelector as a6,Recoil_index_24 as a7,produce as a8,Recoil_index_20 as a9,Empty$1 as aA,Space$1 as aB,Recoil_index_22 as aC,Table$1 as aD,Modal$1 as aE,generateId as aF,ProForm as aG,EntityFieldEnum as aH,getEntityFieldTypeLabel as aI,Recoil_index_31 as aJ,DrawerForm as aK,getRootRawElement as aL,widgetsSelector as aM,selectedWidgetIdAtom as aN,getSlotRawElement as aO,getWidgetIdFromElement as aP,widgetSelector$1 as aQ,widgetRelationByWidgetIdSelector as aR,useDrag as aS,WidgetDragType as aT,SimulatorInstanceContext as aU,getRootElementFromWidgetId as aV,FullscreenOutlined$1 as aW,DropIndicator as aX,pageSelector as aY,widgetByIdSelector$1 as aZ,AppFactoryContext as a_,Form$1 as aa,reactDom$1 as ab,ModalForm as ac,AppFactory as ad,Button$2 as ae,PlusOutlined$1 as af,ProFormText$1 as ag,Typography$1 as ah,Dropdown$1 as ai,K as aj,Drawer as ak,Input$1 as al,Avatar$1 as am,lodash as an,CopyOutlined$1 as ao,useMount$1 as ap,Menu$1 as aq,SettingOutlined$1 as ar,EditOutlined$1 as as,EllipsisOutlined$1 as at,getDefaultExportFromCjs as au,EntityRelationTypeEnum as av,EntityRelationLookupRelationTypeEnum as aw,EntityRelationMasterDetailRelationTypeEnum as ax,useTheme as ay,cx as az,_slicedToArray$5 as b,Tree$1 as b0,DownOutlined$1 as b1,isRootWidgetSelector as b2,SETTER_KEY as b3,Divider$2 as b4,getWidgetGroupLabel as b5,WidgetGroupEnum as b6,WidgetMetadata as b7,RecoilSync_index_1 as b8,PAGE_ATOM_KEY_STORE_KEY as b9,PAGE_ATOM_STATUS as ba,PAGE_ATOM_KEY as bb,Recoil_index_5 as bc,DndProvider as bd,HTML5Backend as be,defaultAppFactory as bf,ConfigProvider$1 as bg,zhCN as bh,ThemeProvider as bi,client as bj,ReactRender as bk,classNames as c,_objectSpread2$2 as d,_toConsumableArray as e,jsxs as f,genComponentStyleHook as g,_typeof$c as h,ConfigConsumer as i,jsx as j,clearFix as k,resetComponent$1 as l,merge$5 as m,Content$1 as n,omit$2 as o,Sider$1 as p,cloneElement as q,react as r,Col$1 as s,textEllipsis as t,useBreakpoint$2 as u,responsiveArray as v,Spin$1 as w,Fragment as x,defaultRenderEmpty$1 as y,mcss as z};
