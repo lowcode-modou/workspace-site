@@ -1,1 +1,0 @@
-import{x as e,aJ as a,aK as t,aS as r,aR as n,R as o}from"./client-69160c7d.js";const c=()=>e(a,{backend:t,context:window.parent,children:e(r,{host:"simulator"})});n.createRoot(document.getElementById("simulator_pc_root")).render(e(o.StrictMode,{children:e(c,{})}));
